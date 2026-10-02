@@ -1,95 +1,62 @@
-# Eleanor Koh — Data & Financial Analytics Portfolio
+# Eleanor Koh
 
-Targeting roles in **data analysis**, **financial modelling**, **quantitative research**, and **asset management / portfolio analytics**.
-
----
-
-## Core Strengths
-
-- Portfolio analytics: construction logic, drift/rebalance, P&L accounting, risk controls
-- Quantitative methods: time-series econometrics, Granger causality, stationarity testing, classification
-- Data engineering: API integration, SQLite schema design, ETL pipelines, reproducible notebooks
-- Python for financial data analysis, automation, and system design
-- Finance domain: CFA Level I, FDP — investment analysis, portfolio theory, financial data methods
+Index of my public work, and the credentials behind it. Targeting data and
+product roles where the work involves building things that handle money or
+operational state.
 
 ---
 
-## Featured Projects
+## Projects
 
-### Standalone Repositories
+**[Portfolio OS](https://github.com/elkhz09/portfolio-os)** — paper-trading
+system for running a discretionary portfolio. Strict command parser, pre-trade
+risk checks, append-only cash ledger, FIFO realised P&L, Telegram and Streamlit
+interfaces. 181 tests. Nothing executes without explicit confirmation, and the
+system never selects an investment.
 
-#### [Portfolio OS](https://github.com/elkhz09/portfolio-os)
-**Discretionary macro portfolio management system**
+**[ETF Research & Portfolio Analytics](https://github.com/elkhz09/tipranks-etf-analytics)**
+— ETF holdings ingestion into SQLite, then look-through from ETF weights to
+estimated stock-level exposure. Built to find out how much of a nine-ETF
+allocation was the same handful of companies bought repeatedly.
 
-A human-in-the-loop paper trading system covering the full operational stack of a discretionary PM workflow. Built around a strict command interface, pre-trade risk engine, and full audit trail.
+**[COE Price Dynamics](https://github.com/elkhz09/analysis/tree/main/coe-price-dynamics)**
+— time-series work on Singapore's vehicle quota auction. Population has been
+flat since 2016, premiums have not. Granger causality puts the driver in bidding
+activity rather than stock-level supply: the quota sets how many certificates
+exist, competition sets what they cost.
 
-- Target weight setting, drift computation, rebalance order generation
-- Pre-trade risk checks: cash availability, position limits, tradable allowlist, duplicate prevention
-- FIFO realised P&L tracking across all trades
-- Every order requires explicit `/confirm` — nothing executes automatically
-- Streamlit dashboard with allocation breakdown and P&L charts; Telegram bot interface
-
-`Python` `SQLAlchemy` `Pydantic` `Streamlit` `SQLite` `portfolio analytics` `risk controls` `P&L accounting`
-
----
-
-#### [ETF Research & Portfolio Analytics](https://github.com/elkhz09/tipranks-etf-analytics)
-**ETF holdings overlap and portfolio look-through tool**
-
-Pulls ETF holdings data via API, stores it in a local SQLite database, and computes stock-level exposure across multi-ETF portfolios. Supports thematic sleeve research across Asia, semiconductors, AI, and US market beta.
-
-- Portfolio look-through: converts ETF weights into estimated stock-level exposures
-- Holdings overlap analysis: identifies concentration risk from repeated exposures across thematic and regional ETFs
-- CLI tooling and reproducible notebook workflow
-
-`API integration` `portfolio look-through` `holdings analysis` `pandas` `SQLite` `Python packaging`
+**[Recipe Traffic Prediction](https://github.com/elkhz09/analysis/tree/main/datacamp-capstone)**
+— classification under an asymmetric cost. Chose logistic regression at 0.87
+precision over a gradient-boosted model with better F1, because the better F1
+came with 0.74 precision and the brief set a floor of 0.80.
 
 ---
 
-### Analyses — [`elkhz09/analysis`](https://github.com/elkhz09/analysis)
+## Credentials
 
-#### [COE Price Dynamics — Singapore](https://github.com/elkhz09/analysis/tree/main/coe-price-dynamics)
-**Time-series econometric analysis of auction-cleared prices**
-
-Investigates whether stabilising Singapore's vehicle population stabilises COE premiums, using 20+ years of LTA / data.gov.sg data. Applies a structured research methodology: EDA → stationarity diagnostics → Granger causality testing → interpretation.
-
-Key finding: population-level supply caps do not stabilise prices. Bids received and new registrations Granger-cause premium changes — demand pressure and auction dynamics dominate short-run price formation.
-
-`time-series` `ADF stationarity` `Granger causality` `Statsmodels` `Python` `econometrics`
-
----
-
-#### [Recipe Traffic Prediction](https://github.com/elkhz09/analysis/tree/main/datacamp-capstone)
-**Binary classification for content optimisation (DataCamp capstone)**
-
-Predicts high-traffic recipes for a digital food platform. Logistic Regression achieved 87% precision against an 80% business target. Demonstrates a complete data science workflow: EDA → feature engineering → model comparison → business recommendation.
-
-`classification` `feature engineering` `scikit-learn` `business framing` `model selection`
-
----
-
-## Certifications
-
-| Credential | Issuer | Skills Demonstrated |
+| Credential | Issuer | Verification |
 |---|---|---|
-| CFA Level I | CFA Institute | Investment analysis, equity/fixed income/derivatives, portfolio management, quantitative methods |
-| Financial Data Professional (FDP) | FDP Institute | Time-series analysis, regression diagnostics, statistical inference for financial data |
-| Data Scientist Professional | DataCamp | End-to-end data science: EDA, statistical inference, supervised learning, model evaluation |
-| GitHub Foundations | GitHub | Git workflows, version control, branching, collaboration |
-| Python and Statistics for Financial Analysis | Coursera | Financial time-series, statistical methods, Python |
-| Analyze Financial Data with Python | Codecademy | Financial data pipelines, visualisation |
-| Finance Fundamentals Skill Track | DataCamp | Financial markets, instruments, data-driven analysis |
+| CFA Level I | CFA Institute | [basno](https://basno.com/lq0k1974) |
+| Financial Data Professional | FDP Institute | [Credly](https://www.credly.com/badges/2784e228-b5be-4741-92fb-fa3b4239c696) |
+| Data Scientist Professional | DataCamp | — |
+| Python Data Associate | DataCamp | — |
+| GitHub Foundations | GitHub | — |
+| IBM Data Science Professional | Coursera / IBM | — |
 
-Full details and verification links in [certifications/](certifications/).
+Certificates and the coursework behind them are in
+[`certifications/`](certifications/).
 
 ---
 
-## Skills
+## Tools
 
-| Area | Tools / Methods |
-|---|---|
-| Languages | Python, SQL |
-| Analytics | Time-series, regression, classification, hypothesis testing, EDA |
-| Finance | Portfolio construction, P&L, rebalance logic, ETF analytics, market microstructure |
-| Tools | pandas, NumPy, Statsmodels, scikit-learn, SQLAlchemy, Streamlit, Jupyter |
-| Dev | Git, modular packaging, unit tests, SQLite schema design |
+Python, SQL, pandas, statsmodels, scikit-learn, SQLAlchemy, Pydantic, SQLite,
+Streamlit, Jupyter, git.
+
+---
+
+## Licensing
+
+The writing in this repository is mine. The certificates, course handouts and
+supplied datasets under `certifications/` are issued or owned by the relevant
+institutions and are included for reference only, not relicensed.
