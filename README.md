@@ -72,7 +72,7 @@ at the links above but have no PDF in this repository.
 
 - **[portfolio-os](https://github.com/elkhz09/portfolio-os)** paper-trading system.
   Append-only cash ledger, FIFO realised P&L across partial sells, pre-trade risk
-  checks, two-step order confirmation, Telegram and Streamlit. 181 tests.
+  checks, two-step order confirmation, Telegram and Streamlit. 158 tests.
 - **[tipranks-etf-analytics](https://github.com/elkhz09/tipranks-etf-analytics)**
   ETF holdings into SQLite, then look-through from fund weights to estimated
   stock-level exposure.
